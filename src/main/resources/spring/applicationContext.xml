@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
  
-	<context:component-scan base-package="org.codingpedia.demo.rest.*" />
+	<context:component-scan base-package="org.dayoff.server.rest.*" />
  
 	<!-- ************ JPA configuration *********** -->
 	<tx:annotation-driven transaction-manager="transactionManager" />  
@@ -26,7 +26,7 @@
         <property name="persistenceXmlLocation" value="classpath:config/persistence-demo.xml" />
         <property name="persistenceUnitName" value="demoRestPersistence" />        
         <property name="dataSource" ref="restDemoDS" />
-        <property name="packagesToScan" value="org.codingpedia.demo.*" />
+        <property name="packagesToScan" value="org.dayoff.server.*" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="showSql" value="true" />
@@ -38,7 +38,7 @@
         <property name="persistenceXmlLocation" value="classpath:config/persistence-demo.xml" />
         <property name="persistenceUnitName" value="demoRestPersistenceLegacy" />
         <property name="dataSource" ref="restDemoLegacyDS" />
-        <property name="packagesToScan" value="org.codingpedia.demo.*" />
+        <property name="packagesToScan" value="org.dayoff.server.*" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="showSql" value="true" />
@@ -47,12 +47,12 @@
         </property>
     </bean>        
     	
-	<bean id="podcastDao" class="org.codingpedia.demo.rest.dao.PodcastDaoJPA2Impl"/>	
-    <bean id="podcastService" class="org.codingpedia.demo.rest.service.PodcastServiceDbAccessImpl" />	
-    <bean id="podcastsResource" class="org.codingpedia.demo.rest.resource.podcast.PodcastsResource" />
-    <bean id="podcastLegacyResource" class="org.codingpedia.demo.rest.resource.podcast.PodcastLegacyResource" />
+	<bean id="podcastDao" class="org.dayoff.server.rest.dao.PodcastDaoJPA2Impl"/>	
+    <bean id="podcastService" class="org.dayoff.server.rest.service.PodcastServiceDbAccessImpl" />	
+    <bean id="podcastsResource" class="org.dayoff.server.rest.resource.podcast.PodcastsResource" />
+    <bean id="podcastLegacyResource" class="org.dayoff.server.rest.resource.podcast.PodcastLegacyResource" />
     
-    <bean id="versionService" class="org.codingpedia.demo.rest.resource.manifest.ManifestService" />
+    <bean id="versionService" class="org.dayoff.server.rest.resource.manifest.ManifestService" />
     
 	<bean id="restDemoDS" class="org.springframework.jndi.JndiObjectFactoryBean" scope="singleton">
 	    <property name="jndiName" value="java:comp/env/jdbc/restDemoDB" />
