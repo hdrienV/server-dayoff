@@ -32,7 +32,6 @@ public class AppException extends Exception {
 	 * @param code
 	 * @param message
 	 * @param developerMessage
-	 * @param link
 	 */
 	public AppException(int status, int code, String message,
 			String developerMessage, String link) {
@@ -40,7 +39,6 @@ public class AppException extends Exception {
 		this.status = status;
 		this.code = code;
 		this.developerMessage = developerMessage;
-		this.link = link;
 	}
 
 	public AppException() { }
@@ -69,12 +67,5 @@ public class AppException extends Exception {
 		this.developerMessage = developerMessage;
 	}
 
-	public String getLink() {
-		return link;
-	}
-
-	public void setLink(String link) {
-		this.link = link;
-	}
 					
 }

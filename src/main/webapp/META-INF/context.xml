@@ -18,6 +18,6 @@
 	   username="root"
 	   password=""
 	   driverClassName="com.mysql.jdbc.Driver"
-	   url="jdbc:mysql://localhost:3306/rest_demo?allowMultiQueries=true"
+	   url="jdbc:mysql://localhost:3306/offtime?allowMultiQueries=true"
    /> 
 </Context>

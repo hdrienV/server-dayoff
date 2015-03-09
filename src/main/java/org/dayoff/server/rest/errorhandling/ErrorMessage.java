@@ -25,9 +25,6 @@ public class ErrorMessage {
 	@XmlElement(name = "message")
 	String message;
 		
-	/** link point to page where the error message is documented */
-	@XmlElement(name = "link")
-	String link;
 	
 	/** extra information that might useful for developers */
 	@XmlElement(name = "developerMessage")
@@ -65,13 +62,6 @@ public class ErrorMessage {
 		this.developerMessage = developerMessage;
 	}
 
-	public String getLink() {
-		return link;
-	}
-
-	public void setLink(String link) {
-		this.link = link;
-	}
 	
 	public ErrorMessage(AppException ex){
 		try {
@@ -87,8 +77,7 @@ public class ErrorMessage {
 	
 	public ErrorMessage(NotFoundException ex){
 		this.status = Response.Status.NOT_FOUND.getStatusCode();
-		this.message = ex.getMessage();
-		this.link = "https://jersey.java.net/apidocs/2.8/jersey/javax/ws/rs/NotFoundException.html";		
+		this.message = ex.getMessage();		
 	}
 
 	public ErrorMessage() {}

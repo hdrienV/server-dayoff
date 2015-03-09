@@ -39,14 +39,16 @@
   	</appender>  	
   		
 	<logger name="org.dayoff" additivity="false">
-	    <level value="DEBUG" />
+	    <level value="TRACE" />
 		<appender-ref ref="dailyRollingFileAppender"/>
 		<appender-ref ref="minuteRollingFileAppender"/>
 		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="SQLROLLINGFILE" />
 	</logger>
 
 	<root>
 		<level value="INFO" />
 		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="SQLROLLINGFILE" />
 	</root>
 </configuration> 

@@ -6,11 +6,7 @@ import org.dayoff.server.rest.errorhandling.AppException;
 import org.dayoff.server.rest.errorhandling.CustomReasonPhraseException;
 import org.dayoff.server.rest.resource.podcast.Podcast;
 
-/**
- * 
- * @author ama
- * @see <a href="http://www.codingpedia.org/ama/spring-mybatis-integration-example/">http://www.codingpedia.org/ama/spring-mybatis-integration-example/</a>
- */
+
 public interface PodcastService {
 	
 	/*

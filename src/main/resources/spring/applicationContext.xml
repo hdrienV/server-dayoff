@@ -41,7 +41,6 @@
         <property name="packagesToScan" value="org.dayoff.server.*" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-                <property name="showSql" value="true" />
                 <property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect" />
             </bean>
         </property>
@@ -51,6 +50,10 @@
     <bean id="podcastService" class="org.dayoff.server.rest.service.PodcastServiceDbAccessImpl" />	
     <bean id="podcastsResource" class="org.dayoff.server.rest.resource.podcast.PodcastsResource" />
     <bean id="podcastLegacyResource" class="org.dayoff.server.rest.resource.podcast.PodcastLegacyResource" />
+    
+    <bean id="leaveDao" class="org.dayoff.server.rest.dao.LeaveDaoJPA2Impl"/>	
+    <bean id="leaveService" class="org.dayoff.server.rest.service.LeaveServiceDbAccessImpl" />	
+    
     
     <bean id="versionService" class="org.dayoff.server.rest.resource.manifest.ManifestService" />
     

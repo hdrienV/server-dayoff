@@ -23,7 +23,6 @@ public class GenericExceptionMapper implements ExceptionMapper<Throwable> {
 		StringWriter errorStackTrace = new StringWriter();
 		ex.printStackTrace(new PrintWriter(errorStackTrace));
 		errorMessage.setDeveloperMessage(errorStackTrace.toString());
-		errorMessage.setLink(AppConstants.BLOG_POST_URL);
 				
 		return Response.status(errorMessage.getStatus())
 				.entity(errorMessage)

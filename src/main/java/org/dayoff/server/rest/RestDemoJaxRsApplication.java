@@ -23,6 +23,7 @@ public class RestDemoJaxRsApplication extends ResourceConfig {
 //		// register application resources
 //		register(PodcastsResource.class);
 //		register(PodcastLegacyResource.class);
+//		register(LeavesResource.class);
 //
 //		// register filters
 //		register(RequestContextFilter.class);
